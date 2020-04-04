@@ -19,14 +19,20 @@ var $dlgGoto = (function(){
             $dlg = $(html),
             cfg = {
                 container:'body',
-                num:6,
-                title:'同意',
-                onClick:null
+                maxnum:6,
             };
     function show(conf){
         $(cfg.container).append($dlg);
         $.extend(cfg,conf);
-
+        $('.btn-goto').click(()=>{
+            console.log($('.text-ine-num').val());
+        })
+        $('.btn-cancel').click(()=>{
+            $dlg.remove();
+        })
+        $('.closs-btn').click(()=>{
+            $dlg.remove();
+        })
     }
     return {
         show:show

@@ -64,3 +64,8 @@
     right:14px;
     bottom:16px
 }
+.notepad-dlg-goto .closs-btn{
+    float:right;
+    margin-right:10px;
+    margin-top:5px;
+}
