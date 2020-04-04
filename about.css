@@ -1,0 +1,57 @@
+.about-mask{
+    width:100%;
+    height:100%;
+    left:0;
+    top:0;
+    position:fixed;
+    z-index:10
+}
+.about-box{
+    border:1px solid #0f7fdb;
+    box-shadow:10px 10px 10px #d6d6d6;
+    box-sizing:border-box;
+    cursor: default;
+    height:400px;
+    width:600px;
+    margin :0 auto;
+    top:100px;
+    position: relative;
+    user-select:none;
+    /* background-color:#CCCCCC; */
+}
+.about-titlebar{
+    width:600px;
+    height:50px;
+}
+.about-title{
+    width:200px;
+    float:left
+}
+.about-close{
+    float:right;
+    margin-right:10px;
+    margin-top:5px;
+}
+.about-main{
+    margin:0 auto
+}
+.about-slogan{
+    text-align: center;
+    color:#0066CC;
+}
+.about-logo{
+    float:left;
+    margin-right:30px;
+    margin-top:20px;
+    margin-left:20px;
+}
+.about-info{
+    float:left;
+    width:500px;
+}
+.about-ok{
+    position: absolute;
+    bottom:20px;
+    right:20px;
+    right:30px;
+}

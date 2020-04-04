@@ -5,21 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>jsnotepad</title>
     <link rel="stylesheet" href="./dlg-goto.css">
+    <link rel="stylesheet" href="./about.css">
 </head>
 <body>
-    <input type="button" id="popup" value="弹出对话框">
+    <input type="button" id="popup" value="弹出对话框(跳转行数)">
     <hr>
-
+    <input type="button" id="about" value="弹出对话框(关于记事本)">
+    <hr>
 </body>
 <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="./dlg-goto.js"></script>
+<script src="./about.js"></script>
 <script>
     $(function(){
+        //跳转行数
         var $btnDlg = $('#popup');
         $btnDlg.click(function(){
             $dlgGoto.show({
                 container:'body',
                 maxnum:20//最多行数
+            })
+        })
+        var $btnA = $('#about');
+        $btnA.click(function(){
+            $dlgAbout.show({
+                container:'body'
             })
         })
     })
