@@ -67,6 +67,22 @@ function List(){
         cfg.$input.val(cfg.$list.children().eq(n).html());
         cfg.$input.select();
         console.log(cfg.$list.children().eq(n).html())
-        styles = cfg.$list.children().eq(n).html()
+        example(n)
+    }
+    function example(i){
+        switch(cfg.title){
+            case '字体':
+                $('.shili').css({'font-family': cfg.boxs[i]})
+                break
+            case '字号':
+                $('.shili').css({'font-size': cfg.boxs[i]+'px'})
+                break;
+            case '样式':
+                cfg.$div.addClass('list2')
+                if(cfg.boxs[i] === '斜体') { $('.shili').css({'font-style': 'italic'})}
+                if(cfg.boxs[i] === '粗体') { $('.shili').css({'font-weight': 'bold'})}
+                if(cfg.boxs[i] === '粗偏斜体') { $('.shili').css({'font-weight': 'bold', 'font-style': 'italic'})}
+                break; 
+        }
     }
 }

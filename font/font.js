@@ -9,7 +9,7 @@ var $dlgFont = (function(){
                +'     <div class="font-box"></div>'
                +'    <fieldset class="search-direction">'
                +'         <legend>示例</legend>'
-               +'               <p>AaBbYyZz</p>'
+               +'               <span class="shili">AaBbYyZz</span>'
                +'     </fieldset>'
                +'    <span class="font-foot">脚本(R):</span>'
                +'     <br>'
