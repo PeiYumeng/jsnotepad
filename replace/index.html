@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jsnotepad</title>
+    <link rel="stylesheet" href="./replace.css">
+</head>
+<body>
+    <input type="button" id="replace" value="弹出对话框(替换)">
+    <hr>
+</body>
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="./replace.js"></script>
+<script>
+    $(function(){
+        var $btnR = $('#replace');
+        $btnR.click(function(){
+            $dlgReplace.show({
+                container:'body'
+            })
+        })
+    })
+</script>
+</html>

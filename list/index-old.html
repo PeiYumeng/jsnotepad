@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jsnoted-list</title>
+    <link rel="stylesheet" href="./list.css">
+</head>
+<body>
+    <!-- <div class="list-box">
+        <span>字</span>
+        <div class="list1">
+            <input type="text" class="list-input">
+            <br>
+            <ul class="list-ul">
+                <li class="list-li selected">123</li>
+                <li class="list-li">123</li>
+                <li class="list-li">123</li>
+                <li class="list-li">123</li>
+                <li class="list-li">123</li>
+                <li class="list-li">123</li>
+                <li class="list-li">123</li>
+            </ul>
+        </div>
+    </div> -->
+    <input type="button" id="isFont" value="弹出对话框(字体)">
+    <hr>
+    <input type="button" id="isSize" value="弹出对话框(字号)">
+    <hr>
+    <div id="main"></div>
+    <div id="main2"></div>
+</body>
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="./list.js"></script>
+<script>
+      var fonts = ['Agency FB', 'Algerian', 'Arial', 'Arial Rounded MT', 'Axure Handwriting', 'Bahnschrift', 'Baskerville Old Face', 'Bauhaus 93', 'Bell MT', 'Berlin Sans FB', 'Bernard MT', 'BlackAdder ITC'];
+      var sizes = ['8', '9', '10', '11', '12', '14', '16', '18', '20', '22', '24', '26', '28', '36', '48', '72'];
+        $(function(){
+        var $btn = $('#isFont');
+        $btn.click(()=>{
+            $listFont.show({
+                container:'#main',
+                boxs:fonts,
+                title:'字体'
+            })
+        })
+        var $btn2 = $('#isSize');
+        $btn2.click(()=>{
+            $listFont.show({
+                container:'#main2',
+                boxs:sizes,
+                title:'字号'
+            })
+        })
+
+    })
+</script>
+</html>

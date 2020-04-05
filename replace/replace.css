@@ -1,0 +1,62 @@
+.replace-mask{
+    width:100%;
+    height:100%;
+    left:0;
+    top:0;
+    position:fixed;
+    z-index:10
+}
+.replace-box{
+    border:1px solid #0f7fdb;
+    box-shadow:10px 10px 10px #d6d6d6;
+    box-sizing:border-box;
+    cursor: default;
+    height:200px;
+    width:600px;
+    margin :0 auto;
+    top:100px;
+    position: relative;
+    user-select:none;
+}
+.replace-titlebar{
+    height:30px;
+    width:600px;
+    margin-bottom:10px;
+}
+.replace-titlebar .title{
+    float:left;
+    margin-left:10px;
+    margin-top:8px;
+}
+.replace-titlebar .close-btn{
+    float:right;
+    margin-right:10px;
+    margin-top:5px;
+}
+.replace-main{
+    margin:0 auto;
+}
+#tihuan{
+    margin-left:40px;
+    margin-top:20px;
+}
+#daxiaoxie{
+    margin-left:40px;
+    margin-top:20px;
+}
+.btn{
+    position: absolute;
+    bottom:10px;
+}
+.btn-search{
+    right:200px;
+}
+.btn-replace{
+    right:140px;
+}
+.btn-replace-all{
+    right:60px;
+}
+.btn-cancel{
+    right:20px;
+}
