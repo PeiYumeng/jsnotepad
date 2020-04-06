@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="./menubar.css">
+</head>
+<body>
+    <div class="menu-box">
+        <ul class="menu-name">
+            <li class="menu-title">文件(F)</li>
+            <li class="menu-title">编辑(E)</li>
+            <li class="menu-title">格式(O)</li>
+            <li class="menu-title">查看(V)</li>
+            <li class="menu-title">帮助(H)</li>
+        </ul>
+        <ul class="menu-context">
+            <li class="menu-item">
+                <span class="menu-item-left">新建(N)</span>
+                <span class="menu-item-right">Ctrl+N</span>
+            </li>
+            <li class="menu-item">打开(O)...</li>
+            <li class="menu-item">保存(S)</li>
+            <li class="menu-item">另存为(A)...</li>
+            <hr>
+            <li class="menu-item">页面设置(U)</li>
+            <li class="disabled menu-item">打印(P)</li>
+            <hr>
+            <li class="menu-item">退出(X)</li>
+        </ul>
+    </div>
+</body>
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="./menubar.js"></script>
+<script src="./menu-data.js"></script>
+<script>
+    $(function() {
+        $menubar.show(np.menuData);
+        $statusBar.init();
+        $statusBar.display(false);
+        $menubar.enabled(4, 0, false);
+        $menubar.enabled(1, 0, true);
+    });
+</script>
+</html>
