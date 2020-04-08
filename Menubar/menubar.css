@@ -13,32 +13,38 @@
 }
 .menu-title{
     float: left;
-    width:60px;
+    width:70px;
     height:20px;
     text-align: center;
     list-style: none;
 }
 .menu-context{
-    /* display: none; */
+    display: none;
     position: absolute;
     top:22px;
-    width:170px;
+    width:200px;
+    font-size: 16px;
     border: 1px solid black;
     box-shadow: 10px 10px 10px #d6d6d6;
-    padding-left:10px;
-    padding-right:10px;
-}
-.menu-context :hover{
-    display: block;
 }
 .menu-item{
-    width:150px;
-    height:30px;
-    list-style: none
+    width:200px;
+    list-style: none;
+}
+.menu-item hr{
+    border-top:1px solid black;
+    border-bottom:none;
+    width:100%;
 }
 .menu-item-left{
-    float:left
+    float:left;
+    width:120px;
+    margin-left:10px;
+    line-height: 30px;
 }
 .menu-item-right{
-    float:right
+    float:right;
+    width:50px;
+    line-height: 30px;
+    margin-right:10px;
 }
