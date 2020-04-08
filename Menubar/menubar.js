@@ -8,8 +8,6 @@ function Menu(){
     var index = -1;
     var active = false;
     var active_num = 0;
-    var s = -1;
-    var hr = ['',''];
     this.show = function show(conf){
         cfg = {
             container:'body',
@@ -18,7 +16,6 @@ function Menu(){
         var $dlg = $(html);
         $(cfg.container).append($dlg);
         adddata();
-        console.log(hr)
     }
     function adddata(){
         var len = menuData.length;
@@ -30,29 +27,26 @@ function Menu(){
             $('.menu-box').append($ul)
             for(var a=0;a<menuData[i].menuItems.length;a++){
                 if(menuData[i].menuItems[a].title =='hr'){
-                    var $liC = $('<li class="menu-item"></li>');
                     var $hr = $('<hr/>')
-                    $ul.append($liC)
-                    $liC.append($hr)
-                    hr[i] += a+',';
+                    $ul.append($hr)
                 }else{
                     var $liC = $('<li class="menu-item"></li>');
                     var $sp1 = $('<span class="menu-item-left"></span>')
                     var $sp2 = $('<span class="menu-item-right"></span>')
-                    var $br = $('<br/>')
-                    $liC.attr('attr',i)
+                    if(menuData[i].menuItems[a].enabled){
+                        $liC.css('color','#6d6d6d')
+                    }
                     $ul.append($liC)
                     $liC.append($sp1.html(menuData[i].menuItems[a].title))
                     $liC.append($sp2.html(menuData[i].menuItems[a].shortcut));
-                    // $ul.append($br);
                     (function(a){
-                        $liC.mouseover(()=>{showSpan(a)})
+                        $liC.mouseover((e)=>{showSpan(e)})
                     }(a))
                 }
             }
             (function(i){
                 $liT.click(()=>{titleClick(i)})
-                $ul.mouseleave(()=>{titleout(i)})
+                // $ul.mouseleave(()=>{titleout(i)})
                 $ul.mouseover(()=>{ulOver(i)})
                 $liT.mouseover(()=>{titleStyle(i)})
                 $liT.mouseout(()=>{
@@ -91,9 +85,10 @@ function Menu(){
         $('.menu-title').css('background','white')
         $('.menu-context').eq(i).css('display','none')
     }
-    function showSpan(a){
-        // var aa = $('.menu-context').eq(index).children().eq(a);
-        // console.log( $('.menu-context').eq(index).children())
-        console.log($('.1'))
+    function showSpan(e){//显示子菜单滑动背景变化
+        $('.menu-item').css('background','white')
+        var a = e.target.parentNode
+        console.log(a)
+        $(a).css({background:'#87CEFA'})
     }
 }

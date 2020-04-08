@@ -30,6 +30,7 @@
 .menu-item{
     width:200px;
     list-style: none;
+    height:30px;
 }
 .menu-item hr{
     border-top:1px solid black;
