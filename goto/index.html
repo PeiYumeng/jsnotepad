@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jsnotepad</title>
+    <link rel="stylesheet" href="./dlg-goto.css">
+    <link rel="stylesheet" href="./about.css">
+    <link rel="stylesheet" href="./search.css">
+</head>
+<body>
+    <input type="button" id="popup" value="弹出对话框(跳转行数)">
+    <hr>
+    <input type="button" id="about-text" value="弹出对话框(关于记事本)">
+    <hr>
+    <!-- <input type="button" id="search" value="弹出对话框(查找)">
+    <hr> -->
+</body>
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="./dlg-goto.js"></script>
+<!-- <script src="./search.js"></script> -->
+<script src="./about.js"></script>
+<script>
+    $(function(){
+        //跳转行数
+        var $btnDlg = $('#popup');
+        $btnDlg.click(function(){
+            $dlgGoto.show({
+                container:'body',
+                maxnum:20//最多行数
+            })
+        })
+        var $btnA = $('#about-text');
+        $btnA.click(function(){
+            $dlgAbout.show({
+                container:'body'
+            })
+        })
+        // var $btnS = $('#search');
+        // $btnS.click(function(){
+        //     $dlgSearch.show2({
+        //         container:'body'
+        //     })
+        // })
+    })
+</script>
+</html>
