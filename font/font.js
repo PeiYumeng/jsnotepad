@@ -20,9 +20,9 @@ var $dlgFont = (function(){
                +'    <input class="btn-ok" type="button" value="确定">'
                +'     <input class="btn-cancel" type="button" value="取消">'
                +'   </div>'
-               +'   </div>'
-            $dlg = $(html),
-            cfg = {
+               +'   </div>';
+           var $dlg = $(html);
+            var cfg = {
                 container:'body',
             };
     function show(conf){

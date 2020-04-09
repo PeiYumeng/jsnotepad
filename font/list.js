@@ -33,7 +33,7 @@ function List(){
     function addtitle(){
         cfg.$listBox.append(cfg.title)
     }
-    function style(i){
+    function style(i,$item){
         switch(cfg.title){
             case '字体':
                 cfg.$div.addClass('list1')
@@ -53,8 +53,8 @@ function List(){
     }
     function addli(){
         for(var i=0;i<cfg.boxs.length;i++){
-            $item = $('<li class="list-li"></li>');
-            style(i)
+            var $item = $('<li class="list-li"></li>');
+            style(i,$item)
             cfg.$list.append($item.html(cfg.boxs[i]));
             (function(i){
                 $item.click(()=>{selectLi(i)})
