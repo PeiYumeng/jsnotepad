@@ -34,6 +34,7 @@ module.exports = function (grunt) {
           'dist/font/list.css': './font/list.css',
           'dist/font/font.css': './font/font.css',
           'dist/Menubar/menubar.css': './Menubar/menubar.css',
+          'dist/edit/edit.css':'./edit/edit.css'
     },
     uglify: {
       release:{
@@ -42,6 +43,7 @@ module.exports = function (grunt) {
           'dist/font/list.js': './font/list.js',
           'dist/font/font.js': './font/font.js',
           'dist/Menubar/menubar.js': './Menubar/menubar.js',  
+          'dist/edit/edit.js':'./edit/edit.js'
         }
       }         
     }
