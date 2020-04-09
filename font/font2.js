@@ -30,15 +30,12 @@ var $dlgFont = (function(){
         $.extend(cfg,conf);
 
         $('.about-close').click(()=>{
-            $('.list-box').remove();
             $dlg.remove();
         })
         $('.btn-cancel').click(()=>{
-            $('.list-box').remove();
             $dlg.remove();
         })
         $('.btn-ok').click(()=>{
-            $('.list-box').remove();
             $dlg.remove();
         })
     }

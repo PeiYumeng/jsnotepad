@@ -214,11 +214,27 @@ var menuData = [
         enabled: true,
         handler: function() {
           $dlgFont.show({
-            family: np.fontFamily,
-            style: np.fontStyle,
-            size: np.fontSize,
-            okHandler: np.fontHandler
-          });
+            container:'body',
+        })
+        var l1 = new List();
+        var l2 = new List();
+        var l3 = new List();
+          l1.show({
+              container:'.font-box',
+              boxs:fonts,
+              title:'字体'
+          })
+          console.log(l1.styles)
+          l2.show({
+              container:'.font-box',
+              boxs:styles,
+              title:'样式'
+          })
+          l3.show({
+              container:'.font-box',
+              boxs:sizes,
+              title:'字号'
+          })
         }
       }
     ],

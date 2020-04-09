@@ -24,26 +24,36 @@ function Menu(){
             $('.menu-name').append($liT.html(menuData[i].title));
             var $ul = $('<ul class="menu-context"></ul>');
             $ul.css('left',70*i+'px')
-            $('.menu-box').append($ul)
-            for(var a=0;a<menuData[i].menuItems.length;a++){
-                if(menuData[i].menuItems[a].title =='hr'){
-                    var $hr = $('<hr/>')
-                    $ul.append($hr)
-                }else{
-                    var $liC = $('<li class="menu-item"></li>');
-                    var $sp1 = $('<span class="menu-item-left"></span>')
-                    var $sp2 = $('<span class="menu-item-right"></span>')
-                    if(menuData[i].menuItems[a].enabled){
-                        $liC.css('color','#6d6d6d')
+            $('.menu-box').append($ul);
+            (function(i){
+                for(var a=0;a<menuData[i].menuItems.length;a++){
+                    if(menuData[i].menuItems[a].title =='hr'){
+                        var $hr = $('<hr/>')
+                        $ul.append($hr)
+                    }else{
+                        var $liC = $('<li class="menu-item"></li>');
+                        var $sp1 = $('<span class="menu-item-left"></span>')
+                        var $sp2 = $('<span class="menu-item-right"></span>')
+                        if(!menuData[i].menuItems[a].enabled){//区分不能使用和能够使用的按钮
+                            $liC.css('color','#6d6d6d')
+                        }
+                        $ul.append($liC)
+                        $liC.append($sp1.html(menuData[i].menuItems[a].title))
+                        $liC.append($sp2.html(menuData[i].menuItems[a].shortcut));
+                        (function(a){
+                            $liC.click(function(e){
+                                active_num = 0;
+                                active = false;
+                                index = -1;
+                                $('.menu-context').css('display','none')
+                                $('.menu-title').css('background','white')
+                                menuData[i].menuItems[a].handler();
+                            })
+                            $liC.mouseover((e)=>{showSpan(e)})
+                        }(a))
                     }
-                    $ul.append($liC)
-                    $liC.append($sp1.html(menuData[i].menuItems[a].title))
-                    $liC.append($sp2.html(menuData[i].menuItems[a].shortcut));
-                    (function(a){
-                        $liC.mouseover((e)=>{showSpan(e)})
-                    }(a))
                 }
-            }
+            }(i));
             (function(i){
                 $liT.click(()=>{titleClick(i)})
                 // $ul.mouseleave(()=>{titleout(i)})
