@@ -1,0 +1,1 @@
+"use strict";var $edit=function(){var n=$('<textarea spellcheck="false" auto-size="none"></textarea>'),t={container:"#main",posHandler:null,contentHandler:null,wrap:!1};return{show:function(e){$.extend(t,e),$(t.container).append(n),console.log(screen.width),$(t.container).css("width",screen.width+"px"),$(t.container).css("height",screen.height-130+"px")}}}();
