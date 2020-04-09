@@ -38,10 +38,10 @@ module.exports = function (grunt) {
     uglify: {
       release:{
         files: {
+          'dist/Menubar/menu-data.js': './Menubar/menu-data.js',  
           'dist/font/list.js': './font/list.js',
           'dist/font/font.js': './font/font.js',
           'dist/Menubar/menubar.js': './Menubar/menubar.js',  
-          'dist/Menubar/menu-data.js': './Menubar/menu-data.js',  
         }
       }         
     }

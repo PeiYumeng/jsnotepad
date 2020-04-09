@@ -54,7 +54,7 @@ var menuData = [
         title: '退出(X)',
         shortcut: '',
         enabled: true,
-        handler: function() { console.log('退出(X) menu clicked!'); }
+        handler: function() { console.log('退出(X) menu clicked!')}
       }
     ],
     width: '202px',
